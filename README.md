@@ -5,7 +5,7 @@
  https://opensource.org/licenses/MIT
 -->
 
-# FastAPI Boilerplate 🍽️
+# FastAPI Full Stack Boilerplate 🍽️
 
 An opiniated yet highly customizable FastAPI implementation with best practices, Django Admin inspired - user & group module, Docker and more.
 
