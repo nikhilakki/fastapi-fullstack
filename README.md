@@ -4,12 +4,11 @@
  This software is released under the MIT License.
  https://opensource.org/licenses/MIT
 -->
-
 # FastAPI Full Stack Boilerplate 🍽️
 
-An opiniated yet highly customizable FastAPI implementation with best practices, Django Admin inspired - user & group module, Docker and more.
+An opinionated yet highly customizable FastAPI implementation with best practices, Django Admin inspired - user & group module, Docker and more.
 
-*This project is under active development, we anticipate the first beta should be out by Q4, 2021. Current build is not suitable for production, but feel free to test on personal projects!*
+*This project is under active development, and we anticipate the first beta should be out by Q4, 2021. The current build is not suitable for production, but feel free to test on personal projects!*
 
 
 ## Features & Roadmap - ⏳
@@ -70,4 +69,4 @@ An opiniated yet highly customizable FastAPI implementation with best practices,
 > - Version - 0.1.0-alpha
 > - License - MIT 🤟
 
-*This project won't be possible without the amazing work of awesome developers of various projects, on the shoulders this one stands.* 🙏
+*This project won't be possible without the amazing work of awesome developers of various projects on the shoulders this one stands.* 🙏
