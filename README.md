@@ -61,8 +61,10 @@ An opiniated yet highly customizable FastAPI implementation with best practices,
   - [ ] Digital Ocean K8s Cluster
 
 ### Todos (readme) -
+- [ ] Installation & Quick Start
+- [ ] Wiki page
+- [ ] API Documentation
 - [ ] Contribution Guide for developers
-- [ ] Documentation / Wiki page
 
 > - Author - [Nikhil Akki](http://nikhilakki.in) 😎
 > - Version - 0.1.0-alpha
