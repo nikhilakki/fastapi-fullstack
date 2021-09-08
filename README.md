@@ -8,7 +8,7 @@
 
 An opinionated yet highly customizable FastAPI implementation with best practices, Django Admin inspired - user & group module, Docker and more.
 
-*This project is under active development, and we anticipate the first beta should be out by Q4, 2021. The current build is not suitable for production, but feel free to test on personal projects!*
+*The current build is not functional yet. However, this project is under active development, and we anticipate the first beta should be out by Q4, 2021.*
 
 
 ## Features & Roadmap - ⏳
