@@ -28,13 +28,12 @@ An opinionated yet highly customizable FastAPI implementation with best practice
 - [ ] Fully Async 🏃
 - [ ] Celery integration 👷
 
-**Database** - 📚
+**Database for Admin UI** - 📚
 - [ ] SQL (using SQLAlchemy) ✍️
-  - [x] SQLite3
-  - [ ] PostgreSQL
-  - [ ] MySQL
-- [ ] NoSQL
-  - [ ] MongoDB
+  - [x] SQLite3 (local dev & testing)
+  - [ ] PostgreSQL (prod and dockerised env)
+  
+> *You can use any kind of db for the APIs you build*
 
 **Frontend** - 💻
 - [ ] React based Admin UI
@@ -50,7 +49,7 @@ An opinionated yet highly customizable FastAPI implementation with best practice
 - [ ] CLI tool
   - [ ] Custom project skafolding
   - [ ] Generate component boilerplate
-  - [ ] Generate UI component (experimental)
+  - [ ] Ability to choose components like Admin UI, Deployment recipes etc.
 
 **Deploymeny Receipes** - 🥞
 - [ ] Docker compose (Single node deployment)
@@ -62,10 +61,10 @@ An opinionated yet highly customizable FastAPI implementation with best practice
   - [ ] AWS EKS
   - [ ] Digital Ocean K8s Cluster
 
-### Todos (readme) -
+### Todos (readme & repo) -
 - [ ] Installation & Quick Start
 - [ ] Wiki page
-- [ ] API Documentation
+- [ ] API Documentation on Github pages
 - [ ] Contribution Guide for developers
 
 > - Author - [Nikhil Akki](http://nikhilakki.in) 😎
