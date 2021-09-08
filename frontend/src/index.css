@@ -5,3 +5,21 @@
  * https://opensource.org/licenses/MIT
  */
 
+
+ .footer{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #0D6EFD;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .footer-p{
+    color: aliceblue;
+    text-align: center;
+  }
+
+  .container {
+    margin-top: 1rem;
+  }
