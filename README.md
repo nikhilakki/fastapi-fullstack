@@ -14,13 +14,14 @@ An opinionated yet highly customizable FastAPI implementation with best practice
 ## Features & Roadmap - ⏳
 
 **Backend** - 🏭
-- [ ] Base structure 🏛️
+- [X] Base structure 🏛️
 - [ ] JWT Authentication 🔏
-- [ ] Django Admin features -
-  - [ ] User model 💁
-  - [ ] Group model 👨‍👨‍👧‍👦
-- [ ] Packaging 🎁
-  - [ ] Docker support 🚢
+- [ ] Django Admin like features -
+  - [ ] User module 💁
+  - [ ] Group module 👨‍👨‍👧‍👦
+  - [ ] Permissions module 🚪
+- [X] Packaging 🎁
+  - [X] Docker support 🚢
   - [x] Pipenv support 💼
 - [ ] Testing 🧪
   - [ ] Unit tests with pytest 🩺
@@ -28,7 +29,7 @@ An opinionated yet highly customizable FastAPI implementation with best practice
 - [ ] Celery integration 👷
 
 **Database** - 📚
-- [ ] SQL (using SQLAlchemy) 🪄
+- [ ] SQL (using SQLAlchemy) ✍️
   - [x] SQLite3
   - [ ] PostgreSQL
   - [ ] MySQL
@@ -42,6 +43,8 @@ An opinionated yet highly customizable FastAPI implementation with best practice
     - [ ] List view for User & Group table
     - [ ] List view for custom components
     - [ ] Create new record
+- [ ] Packaging
+  - [ ] Docker support 🚢
 
 **Tooling** - 🧰
 - [ ] CLI tool

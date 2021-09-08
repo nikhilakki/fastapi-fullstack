@@ -1,0 +1,14 @@
+# Ignore everything
+# **
+
+# ... except for dependencies and source
+# !Pipfile
+# !Pipfile.lock
+# !apis/
+# !cli/
+# !core/
+# !db/
+# !apis/
+
+tests/
+*.db
