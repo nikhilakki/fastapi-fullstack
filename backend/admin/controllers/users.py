@@ -4,8 +4,8 @@
 # https://opensource.org/licenses/MIT
 
 from sqlalchemy.orm import Session
-from db.models.users import User
-from schemas.users import UserCreate
+from admin.models.users import User
+from admin.schemas.users import UserCreate
 from core.hashing import Hasher
 
 

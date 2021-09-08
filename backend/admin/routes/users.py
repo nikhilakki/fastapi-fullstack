@@ -5,9 +5,8 @@
 
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from starlette import responses
-from schemas.users import UserCreate, ShowUser
-from apis.controllers.users import UserController
+from admin.schemas.users import UserCreate, ShowUser
+from admin.controllers.users import UserController
 from db.session import get_db
 
 

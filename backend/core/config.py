@@ -12,7 +12,7 @@ load_dotenv(dotenv_path=env_path)
 
 
 class Settings:
-    PROJECT_NAME: str = "FastAPI Boilerplate"
+    PROJECT_NAME: str = "FastAPI Fullstack Backend"
     PROJECT_VERSION: str = "0.1.0"
 
     POSTGRES_USER: str = os.getenv("POSTGRES_USER")
