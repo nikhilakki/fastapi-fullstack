@@ -17,7 +17,7 @@ if MODE == "prod":
     SQLALCHEMY_DATABASE_URL = settings.DATABASE_URL
 else:
     print("Using SQLite3")
-    SQLALCHEMY_DATABASE_URL = "sqlite:///./test.sqlite3"
+    SQLALCHEMY_DATABASE_URL = "sqlite:///./db.sqlite3"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
