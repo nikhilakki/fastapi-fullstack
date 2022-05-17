@@ -3,14 +3,17 @@
 # This software is released under the MIT License.
 # https://opensource.org/licenses/MIT
 
-from sqlalchemy import Column, Integer, String, Boolean
-from src.db.base_class import Base
+from sqlalchemy import Column, Table, Integer, String, Boolean
+from src.db.session import metadata
 
 
-class User(Base):
-    id = Column(Integer, primary_key=True, index=True)
-    username = Column(String, unique=True, nullable=False)
-    email = Column(String, nullable=False, unique=True, index=True)
-    hashed_password = Column(String, nullable=False)
-    is_active = Column(Boolean(), default=True)
-    is_superuser = Column(Boolean(), default=False)
+User = Table(
+    "user",
+    metadata,
+    Column("id", Integer, primary_key=True, index=True),
+    Column("username", String, unique=True, nullable=False),
+    Column("email", String, nullable=False, unique=True, index=True),
+    Column("hashed_password", String, nullable=False),
+    Column("is_active", Boolean(), default=True),
+    Column("is_superuser", Boolean(), default=False),
+)

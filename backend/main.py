@@ -8,6 +8,7 @@ from src.base.config import settings
 from src.db.session import engine
 from src.db.base_class import Base
 from src.admin.controller import router as admin_router
+from src.db.session import database
 
 
 def create_tables():
@@ -23,6 +24,16 @@ def start_application():
 
 
 app = start_application()
+
+
+@app.on_event("startup")
+async def startup():
+    await database.connect()
+
+
+@app.on_event("shutdown")
+async def shutdown():
+    await database.disconnect()
 
 
 @app.get("/")

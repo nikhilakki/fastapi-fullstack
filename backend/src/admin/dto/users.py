@@ -14,12 +14,16 @@ class UserCreate(BaseModel):
     password: str
 
 
+class UserUpdate(BaseModel):
+    username: str = None
+    email: EmailStr = None
+    is_active: bool = None
+    is_superuser: bool = None
+
+
 class ShowUser(BaseModel):
     id: int = None
     username: str
     email: EmailStr
-    is_active: bool
-    is_superuser: bool
-
-    class Config:
-        orm_mode = True
+    is_active: bool = None
+    is_superuser: bool = None

@@ -5,48 +5,58 @@
 
 from fastapi import APIRouter, Depends, Path
 from sqlalchemy.orm import Session
-from .dto.users import UserCreate, ShowUser
+from .dto.users import UserCreate, ShowUser, UserUpdate
 from .service import UserService
-from src.db.session import get_db
 
 
 router = APIRouter()
 
 
 @router.get("/")
-def get_all_users(db: Session = Depends(get_db)):
-    users = UserService.list_users(db)
+async def get_all_users():
+    users = await UserService.list_users()
     response = [ShowUser.validate(user) for user in users]
     return response
 
 
 @router.get("/{id}")
-def get_user(id: int = Path("id"), db: Session = Depends(get_db)):
-    user = UserService.retreive_user(id, db)
+async def get_user(
+    id: int = Path("id"),
+):
+    user = await UserService.retreive_user(
+        id,
+    )
     return dict(response=ShowUser.validate(user))
 
 
 @router.post("/")
-def create_user(user: UserCreate, db: Session = Depends(get_db)):
-    user = UserService.create_new_user(user, db)
+async def create_user(
+    user: UserCreate,
+):
+    new_user = await UserService.create_new_user(
+        user,
+    )
     response = ShowUser.validate(user)
     return dict(response=response)
 
 
 @router.patch("/{id}")
-def update_user(user: UserCreate, id: int = Path("id"), db: Session = Depends(get_db)):
-    response = UserService.update_user(id, user, db)
-    print(f"{response=}")
+async def update_user(
+    user: UserUpdate,
+    id: int = Path("id"),
+):
+    response = await UserService.update_user(
+        id,
+        user,
+    )
     return dict(response=response)
 
 
 @router.delete("/{id}")
-def delete_user(id: int = Path("id"), db: Session = Depends(get_db)):
-    response = UserService.retreive_user(id, db)
-    return dict(response=response)
-
-
-@router.get("/{id}")
-def delete_by_user_id(id: int = Path("id"), db: Session = Depends(get_db)):
-    response = UserService.delete_by_user_id(id, db)
+async def delete_by_user_id(
+    id: int = Path("id"),
+):
+    response = await UserService.delete_by_user_id(
+        id,
+    )
     return response

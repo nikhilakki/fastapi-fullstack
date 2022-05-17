@@ -3,29 +3,28 @@
 # This software is released under the MIT License.
 # https://opensource.org/licenses/MIT
 
+from doctest import Example
 from typing import Generator
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from src.base.config import settings
-
+import databases
+import sqlalchemy
 
 MODE = settings.MODE
 
 
 if MODE == "prod":
     print("using a SQL DB")
-    SQLALCHEMY_DATABASE_URL = settings.DATABASE_URL
+    DATABASE_URL = settings.DATABASE_URL
 else:
     print("Using SQLite3")
-    SQLALCHEMY_DATABASE_URL = "sqlite:///./db.sqlite3"
+    DATABASE_URL = "sqlite:///./db.sqlite3"
 
-engine = create_engine(SQLALCHEMY_DATABASE_URL)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+database = databases.Database(DATABASE_URL)
+
+metadata = sqlalchemy.MetaData()
 
 
-def get_db() -> Generator:
-    try:
-        db = SessionLocal()
-        yield db
-    finally:
-        db.close()
+engine = sqlalchemy.create_engine(
+    DATABASE_URL, connect_args={"check_same_thread": False}
+)
+metadata.create_all(engine)
