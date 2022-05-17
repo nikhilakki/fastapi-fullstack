@@ -1,5 +1,5 @@
 <!--
- Copyright (c) 2021 Nikhil Akki
+ Copyright (c) 2022 Nikhil Akki
  
  This software is released under the MIT License.
  https://opensource.org/licenses/MIT
@@ -8,7 +8,7 @@
 
 An opinionated yet highly customizable FastAPI implementation with best practices, Django Admin inspired - user & group module, Docker and more.
 
-*The current build is not functional yet. However, this project is under active development, and we anticipate the first beta should be out by Q4, 2021.*
+*The current build is not functional yet. However, this project is under active development, and we anticipate the first beta should be out by Q4, 2022.*
 
 
 ## Features & Roadmap - ⏳
