@@ -3,5 +3,5 @@
 # This software is released under the MIT License.
 # https://opensource.org/licenses/MIT
 
-from db.base_class import Base
-from db.models.users import User
+from src.db.base_class import Base
+from src.admin.entities.users import User

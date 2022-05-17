@@ -3,9 +3,7 @@
 # This software is released under the MIT License.
 # https://opensource.org/licenses/MIT
 
-from typing import Optional
 from pydantic import BaseModel, EmailStr
-from datetime import date, datetime
 
 
 class GroupCreate(BaseModel):

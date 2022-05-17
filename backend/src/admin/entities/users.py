@@ -4,7 +4,7 @@
 # https://opensource.org/licenses/MIT
 
 from sqlalchemy import Column, Integer, String, Boolean
-from db.base_class import Base
+from src.db.base_class import Base
 
 
 class User(Base):

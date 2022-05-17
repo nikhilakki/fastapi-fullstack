@@ -6,18 +6,18 @@
 from typing import Generator
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from core.config import settings
+from src.base.config import settings
 
 
 MODE = settings.MODE
 
 
 if MODE == "prod":
-    print("using a SQL DB") 
+    print("using a SQL DB")
     SQLALCHEMY_DATABASE_URL = settings.DATABASE_URL
 else:
     print("Using SQLite3")
-    SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
+    SQLALCHEMY_DATABASE_URL = "sqlite:///./test.sqlite3"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
